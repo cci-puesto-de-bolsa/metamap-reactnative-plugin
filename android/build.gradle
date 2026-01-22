@@ -4,22 +4,6 @@ def safeExtGet(prop, fallback) {
     rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
 }
 
-buildscript {
-    ext.kotlin_version = '1.9.0'
-    if (project == rootProject) {
-        repositories {
-            google()
-            mavenCentral()
-            maven { url "https://jitpack.io" }
-        }
-        dependencies {
-            classpath 'com.android.tools.build:gradle:8.3.0'
-            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0"
-            classpath("com.facebook.react:react-native-gradle-plugin")
-        }
-    }
-}
-
 apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
@@ -62,7 +46,7 @@ dependencies {
     // https://github.com/facebook/react-native/blob/0.61-stable/template/android/app/build.gradle#L192
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
-    implementation('com.metamap:android-sdk:3.42.16') {
+    implementation('com.metamap:android-sdk:3.42.15') {
         exclude group: "com.airbnb.android", module: "lottie-compose"
     }
 }
