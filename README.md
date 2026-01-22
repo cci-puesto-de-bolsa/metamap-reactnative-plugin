@@ -1,3 +1,3 @@
-# MetaMap for React Native Usage Guide
+# Metaamp Fork
 
-* [Metamap React Native plugin Documentation](https://docs.metamap.com/docs/quick-start-3)
+This repo is used by CCIMobile. Be careful
